@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>四则运算系统</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<div class="global">
+		<div class="wrap">
+			<div class="header">
+				<div class="nav">
+					<h2>在线四则运算系统</h2>
+				</div>
+				<div class="func">
+					<ul class="func-list">
+						<li class="func-item">用时：</li>
+						<li class="func-item"><input type="text" id="Ctime"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="body">
+				<div class="qt-wrap">
+					<div class="cont-wrap">
+						<div class="rq-box">
+							<label for="stuId">学号：</label>
+							<input type="text" id="stuId" name="studentId">
+						</div>
+
+						<div class="rq-box">
+							<label>数值范围：</label>
+									<label for="minNum">最小值：</label>
+									<input type="text" name="lowLimit" id="minNum">
+									<label for="maxNum">最大值：</label>
+									<input type="text" name="highLimit" id="maxNum">
+						</div>
+
+						<div class="rq-box">
+							<label for="qtNum">题目数量：</label>
+							<input type="text" id="qtNum" name="n" class="inputItem">
+						</div>
+						<div class="rq-box">
+							<label for="optNum">运算符数量：</label>
+							<input type="text" id="optNum" name="flagNumber" class="inputItem">
+						</div>
+						<div class="rq-box">
+							<label for="opt1">是否包含括号：</label>
+							<input type="text" id="opt1" name="ifBrack">
+						</div>
+						<div class="rq-box">
+							<label for="opt2">是否生成分数：</label>
+							<input type="text" id="opt2" name="ifScore">
+						</div>
+						<div class="rq-box">
+							<button type='button' id="makeqt" onclick="timedCount()">开始生成题目</button>
+							<button onclick="downLoad()">下载题目（含答案版）</button>
+    						<button id="Ans" onclick="stopCount()">在线验证答案</button>
+						</div>
+					</div>
+				</div>
+				<div class="qt-cont">
+					<div class="quesitons-box box">
+						<h4>题目：</h4>
+						<ul id="quesText"></ul>
+					</div>
+					<div class="answers-box box">
+						<h4>答案：</h4>
+						<ul id="ansText"></ul>
+						<div class="ansTips" id="ansTips">
+                			<div class="tipsCont">提交做题后，会给出答案。</div>
+            			</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+
+				<div class="res">
+					<h4>在线验证结果：</h4>
+					<div><span id="rights"></span></div>
+					<div><span id="faults"></span></div>
+					<div><span id="rating"></span></div>
+					<div><span id="time"></span></div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/file.js"></script>
+</body>
+</html>

@@ -20,8 +20,17 @@ public class DownloadTemplateServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse response)
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.setHeader("Access-Control-Allow-Origin", request.getHeader("Origin"));
+        response.setHeader("Access-Control-Allow-Credentials", "true");
+        response.setHeader("P3P", "CP=CAO PSA OUR");
+        if (request.getHeader("Access-Control-Request-Method") != null && "OPTIONS".equals(request.getMethod())) {
+            response.addHeader("Access-Control-Allow-Methods", "POST,GET,TRACE,OPTIONS");
+            response.addHeader("Access-Control-Allow-Headers", "Content-Type,Origin,Accept");
+            response.addHeader("Access-Control-Max-Age", "120");
+        }
+
         File file = new File("C:\\Users\\Administrator\\result.txt");
         InputStream ins = new FileInputStream(file);
         /* 设置文件ContentType类型，这样设置，会自动判断下载文件类型 */

@@ -1,0 +1,137 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #d4f1f1bd; 
+}
+
+ul{
+	padding: 0;
+	margin: 0;
+}
+
+li{
+	text-decoration: none;
+}
+
+a{
+	text-decoration: none;
+	color: #000;
+}
+
+.clearfix{
+	clear: both;
+}
+
+.global{
+	width: 100%;
+}
+
+.header{
+	width: 100%;
+	height: 50px;
+	background-color: #c6e8f3b5;
+}
+
+.header .nav{
+	width: 80%;
+	height: 50px;
+	float: left;
+}
+
+.header .nav h2{
+	margin: 0px;
+	text-align: center;
+	line-height: 50px;
+	color: #000;
+}
+
+.header .func{
+	width: 20%;
+	height: 50px;
+	float: left;
+}
+
+.header .func .func-list{
+	width: 100%;
+	height: 50px;
+}
+
+.header .func .func-list .func-item{
+	display: inline-block;
+	float: left;
+	width: 20%;
+	height: 50px;
+	line-height: 50px;
+}
+
+.body{
+	width: 100%;
+	height: 100%;
+}
+
+.body .qt-wrap{
+	width: 700px;
+	height: 250px;
+	margin: 50px auto;
+	background-color: #dbf0f3a1;
+}
+
+.body .qt-wrap .cont-wrap{
+	width: 80%;
+	height: 100%;
+	margin: auto;
+}
+
+.body .qt-wrap .rq-box{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+
+.qt-cont{
+	width: 90%;
+	height: auto;
+	margin: auto;
+}
+
+.qt-cont .box{
+	width: 46%;
+	height: 90%;
+	margin: 0 10px;
+	padding-left: 20px;
+	float: left;
+	background-color: #e1f6fd7d;
+}
+
+.func input{
+	width: 40px;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #777;
+	padding-left: 15px;
+}
+
+.rq-box input{
+	width: 80px;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #777;
+	padding-left: 15px;
+}
+
+.quesitons-box input{
+	width: 50px;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #777;
+	padding-left: 15px;
+}
+
+.res{
+	background-color: #d4f1f1bd;
+	width: 85%;
+	height: 100px;
+	padding: 0 15px;
+	margin: auto;
+}
